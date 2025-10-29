@@ -8,14 +8,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Chin | Gallery</title>
 </head>
-<body>
+<body class="bg-gray-100">
     <!-- Navbar -->
-    <div class="navbar bg-base-100">
+    <div class="navbar bg-base-100 shadow-md">
         <div class="flex-1 ml-10">
             <img src="{{ asset('images/chin-logo.png') }}" alt="Chin Logo" class="w-35">
         </div>
         <div class="flex-none">
-            <ul class="menu menu-horizontal px-1 text-xl mr-10 gap-x-4">
+            <ul class="menu menu-horizontal px-1 text-xl gap-x-4">
                 <li>
                     <a href="{{url("http://localhost:8000/")}}" class="transition duration-300 hover:bg-red-600 hover:text-white rounded-lg px-6 py-2">Home</a>
                 </li>
@@ -28,12 +28,9 @@
             </ul>
         </div>
     </div>
-    <div class=" mb-10 h-150 bg-cover bg-center flex items-center" style="background-image: url('{{ asset('images/gallery-bg.png') }}');">
-        <a href="#photos" class="mt-50 ml-85 text-2xl border bg-black text-white hover:border-black hover:bg-white hover:text-black px-4 py-2 rounded-xl transition duration-300">
-            View Photos
-        </a>
 
-        <div class="carousel carousel-center bg-white rounded-box max-w-md space-x-4 p-4 float-right ml-140">
+    <div class=" mb-10 h-150 bg-cover bg-center flex items-center shadow-md" style="background-image: url('{{ asset('images/gallery-bg.png') }}');">
+        <div class="carousel carousel-center bg-black rounded-box max-w-md space-x-4 p-4 float-right ml-250">
             <div class="carousel-item">
                 <img class="w-full h-100 object-cover rounded-lg" src="{{asset('images/pic14.jpg')}}" alt="marcin-pic-14" class="rounded-box" />
             </div>
@@ -58,7 +55,7 @@
         </div>
     </div>
 
-    <div id="photos" class="mb-20">
+    <div id="photos" class="mb-20container mx-auto px-4 pb-20">
         <div class="text-center mb-10">
             <h1 class="text-2xl font-bold">GALLERY</h1>
         </div>
